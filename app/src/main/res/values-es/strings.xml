@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NotesThree</string>
+    <string name="notes">Notas</string>
+    <string name="title">Título</string>
+    <string name="description">Descripción</string>
+    <string name="date">Fecha</string>
+    <string name="add">Agregar</string>
+    <string name="edit">Editar</string>
+    <string name="details">Detalles</string>
+    <string name="save">Guardar</string>
+    <string name="update">Actualizar</string>
+    <string name="delete">Eliminar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="no_notes">No hay notas</string>
+    <string name="delete_note">Eliminar nota</string>
+    <string name="delete_all_notes">Eliminar todas las notas</string>
+    <string name="enter_the_title">Ingrese el título</string>
+    <string name="enter_the_description">Ingrese la descripción</string>
+    <string name="are_you_sure_you_want_to_delete_all_notes">¿Estás seguro de que quieres eliminar todas las notas?</string>
+    <string name="are_you_sure_you_want_to_permanently_delete_this_note">¿Estás seguro de que deseas eliminar esta nota de forma permanente?</string>
+</resources>

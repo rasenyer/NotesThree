@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.DetailsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/LinearLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/mImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_launcher_background"
+                tools:ignore="ContentDescription"/>
+
+            <TextView
+                android:id="@+id/mTextViewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textAppearance="?attr/textAppearanceSearchResultTitle"
+                android:fontFamily="@font/google_sans_bold"
+                tools:text="@string/title"/>
+
+            <TextView
+                android:id="@+id/mTextViewDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:textAppearance="?attr/textAppearanceSearchResultSubtitle"
+                android:fontFamily="@font/google_sans_regular"
+                tools:text="@string/description"/>
+
+            <TextView
+                android:id="@+id/mTextViewDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:alpha="0.4"
+                android:textAppearance="?attr/textAppearanceSearchResultSubtitle"
+                android:textSize="14sp"
+                android:fontFamily="@font/google_sans_regular"
+                tools:text="@string/date"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <Button
+            android:id="@+id/mButtonEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="5dp"
+            android:text="@string/edit"
+            tools:ignore="ButtonStyle"/>
+
+        <Button
+            android:id="@+id/mButtonDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:text="@string/delete"
+            tools:ignore="ButtonStyle"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

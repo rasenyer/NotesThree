@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.rasenyer.notesthree.ui.fragments.HomeFragment"
+        android:label="@string/notes"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_AddFragment"
+            app:destination="@id/AddFragment"/>
+
+        <action
+            android:id="@+id/action_HomeFragment_to_DetailsFragment"
+            app:destination="@id/DetailsFragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/AddFragment"
+        android:name="com.rasenyer.notesthree.ui.fragments.AddFragment"
+        android:label="@string/add"
+        tools:layout="@layout/fragment_add">
+
+        <action
+            android:id="@+id/action_AddFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/DetailsFragment"
+        android:name="com.rasenyer.notesthree.ui.fragments.DetailsFragment"
+        android:label="@string/details"
+        tools:layout="@layout/fragment_details">
+
+        <argument
+            android:name="note"
+            app:argType="com.rasenyer.notesthree.model.Note"
+            app:nullable="true"/>
+
+        <action
+            android:id="@+id/action_DetailsFragment_to_EditFragment"
+            app:destination="@id/EditFragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/EditFragment"
+        android:name="com.rasenyer.notesthree.ui.fragments.EditFragment"
+        android:label="@string/edit"
+        tools:layout="@layout/fragment_edit">
+
+        <argument
+            android:name="note"
+            app:argType="com.rasenyer.notesthree.model.Note"
+            app:nullable="true"/>
+
+        <action
+            android:id="@+id/action_EditFragment_to_DetailsFragment"
+            app:destination="@id/DetailsFragment"
+            app:popUpTo="@id/DetailsFragment"
+            app:popUpToInclusive="true"/>
+
+    </fragment>
+
+</navigation>
